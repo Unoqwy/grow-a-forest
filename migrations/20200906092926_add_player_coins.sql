@@ -1,0 +1,3 @@
+ALTER TABLE players
+    ADD COlUMN coins Int NOT NULL DEFAULT 0
+;

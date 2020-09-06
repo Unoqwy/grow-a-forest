@@ -1,0 +1,18 @@
+{
+    "Create an embed": {
+        "scope": "rust",
+        "prefix": "embed",
+        "body": [
+            "let _ = ${1:message}.channel_id.send_message(&${2:ctx}.http, |m| {",
+            "\tm.embed(|${3|e: &mut CreateEmbed,e|}| {",
+            "\t\te.title(\"$4\");",
+            "\t\te.color(${5:DEFAULT_COLOR});",
+            "\t\t$0",
+            "\t\te",
+            "\t});",
+            "\tm",
+            "}).await?;"
+        ],
+        "description": "Create and send an embed"
+    }
+}
